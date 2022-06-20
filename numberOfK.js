@@ -18,3 +18,23 @@ function solution(array, commands) {
   }
   return answer;
 }
+
+// 코드 간소화 하기
+
+function solution(array, commands) {
+  let answer = [];
+  for (let i = 0; i < commands.length; i++) {
+    let arr1 = [];
+    for (let j = 0; j < array.length; j++) {
+      arr1.push(array[j]);
+    }
+    const command = commands[i];
+    const [start, end, pick] = command;
+    const arr2 = arr1
+      .splice(start - 1, Math.abs(start - end) + 1)
+      .sort((a, b) => a - b);
+    console.log(arr2);
+    answer.push(arr2[pick - 1]);
+  }
+  return answer;
+}
