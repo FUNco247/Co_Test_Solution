@@ -1,3 +1,5 @@
+//https://programmers.co.kr/learn/courses/30/lessons/60057?language=javascript#
+
 function solution(s) {
   const stringArr = s.split("");
   const length = stringArr.length;
